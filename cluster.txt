@@ -1,0 +1,73 @@
+=== Run information ===
+
+Scheme:       weka.clusterers.SimpleKMeans -init 0 -max-candidates 100 -periodic-pruning 10000 -min-density 2.0 -t1 -1.25 -t2 -1.0 -N 2 -A "weka.core.EuclideanDistance -R first-last" -I 500 -num-slots 1 -S 10
+Relation:     worldometer_data
+Instances:    209
+Attributes:   15
+              Country/Region
+              Continent
+              Population
+              TotalCases
+              NewCases
+              TotalDeaths
+              NewDeaths
+              TotalRecovered
+              NewRecovered
+              ActiveCases
+              Serious,Critical
+              Tot Cases/1M pop
+              Deaths/1M pop
+              TotalTests
+              Tests/1M pop
+Test mode:    evaluate on training data
+
+
+=== Clustering model (full training set) ===
+
+
+kMeans
+======
+
+Number of iterations: 4
+Within cluster sum of squared errors: 329.4236122482011
+
+Initial starting points (random):
+
+Cluster 0: Guinea-Bissau,Africa,1963994,1339,675.235294,8,62.5,53,3340.722222,1278,429.307087,682,4,1500,764
+Cluster 1: Namibia,Africa,2537081,25,675.235294,2053.532609,62.5,16,3340.722222,9,429.307087,10,64.222747,3970,1565
+
+Missing values globally replaced with mean/mode
+
+Final cluster centroids:
+                                             Cluster#
+Attribute                     Full Data             0             1
+                                (209.0)       (142.0)        (67.0)
+===================================================================
+Country/Region                      USA  Saudi Arabia           USA
+Continent                        Africa        Africa        Europe
+Population                30487823.4831 21620879.7603 49280450.4776
+TotalCases                    30477.134     4657.6197    85199.0896
+NewCases                       675.2353      628.7929      773.6655
+TotalDeaths                   2053.5326      432.4661     5489.2258
+NewDeaths                          62.5       60.2465       67.2761
+TotalRecovered               13644.6863     2332.6598     37619.429
+NewRecovered                  3340.7222     3084.2719     3884.2438
+ActiveCases                  12853.9171     2292.2746    35238.2936
+Serious,Critical               429.3071      233.9683      843.3087
+Tot Cases/1M pop              1440.1251      480.7616      3473.403
+Deaths/1M pop                   64.2227       21.5892      154.5805
+TotalTests                  471880.9409   176964.4486  1096927.8349
+Tests/1M pop                 31519.8871    14415.8346     67770.267
+
+
+
+
+Time taken to build model (full training data) : 0.01 seconds
+
+=== Model and evaluation on training set ===
+
+Clustered Instances
+
+0      142 ( 68%)
+1       67 ( 32%)
+
